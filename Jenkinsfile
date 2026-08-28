@@ -20,6 +20,7 @@ pipeline {
                             mvn -version
                             which java
                             readlink -f $(which java)
+                            which mvn
                     '''
                 }
             }
