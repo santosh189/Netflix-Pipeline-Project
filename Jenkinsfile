@@ -30,7 +30,7 @@ pipeline {
               }
              stage('deploy war into tomcat server') {
                  steps{
-                     deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat-creds', path: '', url: 'http://13.207.193.214:8081')], contextPath: 'NETFLIX-HOMEPAGE-APP', war: '**/*.war'
+                     deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat-creds', path: '', url: 'http://13.207.193.214:8081')], contextPath: 'NETFLIX-HOMEPAGE', war: '**/*.war'
                  }
              }
           }
