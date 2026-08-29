@@ -1,4 +1,4 @@
-From tomcat:latest-slim
+FROM tomcat:9-jdk8
 WORKDIR /app
 RUN pip -r requirements.txt 
 COPY target/multi-Netflix-1.2.4.war /usr/local/tomcat/Root.war
