@@ -1,6 +1,7 @@
 FROM tomcat:9-jdk8
 WORKDIR /app
-COPY target/multi-Netflix-1.2.4.war /usr/local/tomcat/Root.war
+RUN useradd -r appuser
+COPY target/multi-Netflix-1.2.4.war /usr/local/tomcat/webapps/Root.war
 RUN chown -R appuser:appuser /usr/local/tomcat
 USER appuser
 EXPOSE 8080 
